@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { PropertyProfile } from '@/components/PropertyProfile';
 
 export const metadata: Metadata = {
-  title: 'Zen and the Art of Citizenship',
+  title: 'The Citizens Compass',
   description:
-    'Corporate profile of ZAC — Christopher J. Bradley\'s memoir-and-civic-manual on the 25 founding principles. Print and digital, July 4, 2026.',
+    'Corporate profile of The Citizens Compass — a civic education PWA built on the preamble plus 25 founding principles, with Family, Citizen, and Educator modes.',
   alternates: {
     canonical: 'https://www.libertysprinciples.com/portfolio/citizens-compass/',
   },
@@ -13,73 +13,86 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <PropertyProfile
-      eyebrow="Source book &amp; education platform"
-      name="Zen and the Art of Citizenship"
-      tagline="A memoir and civic manual on the preamble plus 25 founding principles. The source spine for every other Liberty's Principles Media property."
-      canonicalUrl="https://theartofcitizenship.com"
-      canonicalLabel="theartofcitizenship.com"
-      pricing="Print &amp; digital editions, July 4, 2026."
+      eyebrow="Civic education platform"
+      name="The Citizens Compass"
+      tagline="An interactive teaching platform for the preamble plus 25 founding principles. Family, Citizen, and Educator modes in one PWA."
+      canonicalUrl="https://thecitizenscompass.com"
+      canonicalLabel="thecitizenscompass.com"
+      pricing="Free for families and citizens; educator licensing in development."
       what={
         <>
           <p>
-            <em>Zen and the Art of Citizenship: An Inquiry into Principles</em>
-            (ZAC) is the source book that supplies the principle ordering used
-            across every Liberty&rsquo;s Principles Media product. It is at
-            once a memoir&nbsp;&mdash; the founder&rsquo;s journey from
-            seventeen-year-old enlistee through the Gulf War, law school,
-            practice, and the long rebuild&nbsp;&mdash; and a plainspoken
-            civic manual that walks the reader through the preamble plus
-            twenty-five principles in the arc-of-life ordering Bradley
-            developed.
+            The Citizens Compass is the interactive companion to the source
+            book <em>Zen and the Art of Citizenship</em>. Where the book reads
+            the principles, the Compass teaches them: a progressive web app
+            with three modes that meet a learner where they are.
           </p>
           <p>
-            The arc moves from the individual outward: individual, then family,
-            then society, then governance. The structural choice carries the
-            argument. Most popular treatments of the founding principles
-            present them as a list to be memorized; ZAC presents them as a
-            ladder a citizen actually climbs.
+            <strong>Family mode</strong> walks parents and children through
+            the preamble plus twenty-five principles together, paired with
+            companion stories from Liberty&rsquo;s Principles Pals.
+            <strong> Citizen mode</strong> grounds the principles in active
+            civic life: the Constitution, live federal bills via the
+            Congress.gov API, and the connections between principle and
+            policy. <strong>Educator mode</strong> is the classroom layer:
+            lesson plans, standards alignment, gradebook, and student
+            management. Gamification (XP, badges, streaks) carries through
+            all three.
           </p>
         </>
       }
       audience={
         <p>
-          Adult readers who want a single book to ground their understanding
-          of what the founders argued and why. High school and college
-          civics instructors looking for a primary source they can teach.
-          Veterans who recognize the arc. Anyone whose civic education ended
-          in eleventh grade and who has been quietly aware of the gap since.
+          Homeschooling families who want a structured civic curriculum
+          without partisanship. Adult citizens looking to anchor their
+          political reading in first principles. Civics teachers in middle
+          school, high school, and community college who need lawyer-curated
+          material that ties principle to practice. Veterans and naturalized
+          citizens revisiting the founding documents.
         </p>
       }
       problem={
         <p>
-          The most popular treatments of the founding principles in the modern
-          market are either dry textbooks or partisan polemics. ZAC takes a
-          third path: lawyer-curated, memoir-anchored, non-partisan, and
-          willing to put the writer&rsquo;s own life on the page so the
-          principles read as lived rather than recited.
+          Civic education at the K-12 level has shrunk to a few hours a year
+          in most curricula. Adult civic literacy has followed. The Citizens
+          Compass offers a single platform that teaches the preamble plus
+          twenty-five principles in the arc-of-life ordering, designed by a
+          lawyer and veteran, structured so a family, a self-directed adult,
+          or a classroom can each enter at the right level and find depth
+          beneath each step.
         </p>
       }
       sections={[
         {
-          heading: 'Companion platform',
+          heading: 'Companion legal-research demo',
           body: (
             <p>
-              Three apps comprise the digital companion: a marketing site at
-              theartofcitizenship.com, an education app at thecitizenscompass.com
-              (Family / Citizen / Educator modes), and a Florida family-law
-              legal-assistant at app.thecitizenscompass.com that demonstrates
-              the principle library in active legal-research use. Stack is a
-              Firebase three-app monorepo with Claude Sonnet RAG and Voyage
-              embeddings.
+              A separate companion app at app.thecitizenscompass.com
+              demonstrates the principle library in active legal-research
+              use, focused on Florida family law. It pairs Claude Sonnet
+              with Voyage AI embeddings against a structured statute corpus
+              to show educators and researchers how the principles map to
+              actual legal authority.
+            </p>
+          ),
+        },
+        {
+          heading: 'Stack',
+          body: (
+            <p>
+              React 18 plus Vite plus Capacitor for Android and iOS. PWA
+              first; native shells follow. Firebase Hosting and Cloud
+              Functions on the back end. Claude Sonnet for retrieval-
+              augmented generation in the legal-research demo; Voyage AI
+              (voyage-3-lite, 1024-dim) for embeddings.
             </p>
           ),
         },
       ]}
       contact={
         <p>
-          Press copies, podcast and interview requests, classroom adoption
-          inquiries, and academic-licensing requests should each be routed
-          through the appropriate page below.
+          Educator licensing inquiries, classroom pilots, and homeschool
+          group access requests should be routed through the contact page.
         </p>
       }
     />

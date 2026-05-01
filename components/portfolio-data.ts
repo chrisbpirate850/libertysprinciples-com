@@ -58,11 +58,21 @@ export const PORTFOLIO: PortfolioCardData[] = [
     name: 'Zen and the Art of Citizenship',
     domain: 'theartofcitizenship.com',
     external: 'https://theartofcitizenship.com',
-    internal: '/portfolio/citizens-compass/',
+    internal: '/portfolio/zen-and-the-art-of-citizenship/',
     oneLiner:
       'A memoir and civic manual on the 25 founding principles. Print and digital, July 4, 2026.',
     status: 'July 4 release',
     mark: 'Z',
+  },
+  {
+    name: 'The Citizens Compass',
+    domain: 'thecitizenscompass.com',
+    external: 'https://thecitizenscompass.com',
+    internal: '/portfolio/citizens-compass/',
+    oneLiner:
+      'Civic education PWA on the 25 founding principles. Family, Citizen, and Educator modes.',
+    status: 'PWA live; educator licensing',
+    mark: 'C',
   },
   {
     name: 'Project Potsie',
